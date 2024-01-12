@@ -6,12 +6,12 @@ function read() {
   return str0;
 }
 
-console.log(read());
 
 function solve(str) {
+  const newStr = str.split('');
   const totalArr = [];
-  for (let i = 0; i < str.length; i += 9) {
-    totalArr.push(str.slice(i, i + 9).split(' '));
+  for (let i = 0; i < newStr.length; i += 9) {
+    totalArr.push(newStr.slice(i, i + 9));
   }
   return totalArr;
 }

@@ -5,7 +5,7 @@ function read() {
   const str0 = text[0];
   return str0;
 }
-// console.log(read());
+
 
 function solve(str) {
   const newStr = str.split('');

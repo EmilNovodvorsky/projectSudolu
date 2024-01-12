@@ -1,18 +1,17 @@
-<<<<<<< HEAD
 const fs = require('fs');
 
 function read() {
   const text = fs.readFileSync('./puzzles.txt', 'utf8').split('\n');
   const str0 = text[0];
   return str0;
-=======
-
-console.log(read());
+}
+// console.log(read());
 
 function solve(str) {
+  const newStr = str.split('');
   const totalArr = [];
-  for (let i = 0; i < str.length; i += 9) {
-    totalArr.push(str.slice(i, i + 9).split(' '));
+  for (let i = 0; i < newStr.length; i += 9) {
+    totalArr.push(newStr.slice(i, i + 9));
   }
   return totalArr;
 }

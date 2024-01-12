@@ -1,10 +1,13 @@
+<<<<<<< HEAD
 const fs = require('fs');
 
 function read() {
   const text = fs.readFileSync('./puzzles.txt', 'utf8').split('\n');
   const str0 = text[0];
   return str0;
-}
+=======
+
+console.log(read());
 
 function solve(str) {
   const totalArr = [];

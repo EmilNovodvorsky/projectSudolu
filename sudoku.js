@@ -1,17 +1,22 @@
-const fs = require("fs");
+<<<<<<< HEAD
+const fs = require('fs');
 
 function read() {
   const text = fs.readFileSync('./puzzles.txt', 'utf8').split('\n');
-  return firstStr = text[0];
-}
+  const str0 = text[0];
+  return str0;
+=======
+
 console.log(read());
 
-function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
+function solve(str) {
+  const totalArr = [];
+  for (let i = 0; i < str.length; i += 9) {
+    totalArr.push(str.slice(i, i + 9).split(' '));
+  }
+  return totalArr;
 }
+console.log(solve(read()));
 
 function isSolved() {
   /**

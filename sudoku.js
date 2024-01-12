@@ -4,13 +4,6 @@ function read() {
    */
 }
 
-function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
-}
-
 function isSolved() {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
@@ -26,12 +19,19 @@ function prettyBoard() {
    */
 }
 
-function transpose(transpose) {
+function transpose(matrix) {
+  const res = [];
   for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < i; j++) {
-      const temp = matrix[i][j];
-      matrix[i][j] = matrix[j][i];
-      matrix[j][i] = temp;
+    const row = [];
+    for (let j = 0; j < matrix[i].length; j++) {
+      row.push(matrix[j][i]);
     }
+    res.push(row);
   }
+  return res;
 }
+console.log(transpose([
+  [1, 2, 3],
+  [1, 2, 3],
+  [1, 2, 3],
+]));
